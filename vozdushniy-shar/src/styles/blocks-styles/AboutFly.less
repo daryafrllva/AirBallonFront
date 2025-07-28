@@ -1,0 +1,168 @@
+.about-block {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-block::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../../assets/images/fonFirst.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.about-block::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+.about-block__main {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.about-block__balloon {
+  position: relative;
+  max-width: 90%;
+  text-align: center;
+}
+
+.about-block__balloon-img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+
+}
+
+.about-block__balloon-txt {
+  position: absolute;
+  top: 39%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 550px;
+  padding: 15px;
+  color: @black;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.about-block__balloon-txt h1 {
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+  position: relative;
+  padding-bottom: 15px;
+  transform: translateY(-10px);
+}
+
+.about-block__balloon-txt h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90px;
+  height: 5px;
+  background-color: @blue;
+  border-radius: 2px;
+}
+
+.about-block__balloon-txt p:first-of-type {
+  margin-top: 15px; /* Компенсируем поднятие заголовка */
+}
+
+.about-block__balloon-txt p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.8rem;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about-block__balloon {
+    max-width: 95%;
+  }
+
+  .about-block__balloon-img {
+    max-width: 350px;
+    margin-bottom: 1rem; /* Добавляем отступ снизу */
+  }
+
+  .about-block__balloon-txt {
+    max-width: 90%; /* Увеличиваем ширину текста */
+    padding: 15px 10px; /* Больше отступы по вертикали */
+    top: 45%; /* Корректируем позицию */
+  }
+
+  .about-block__balloon-txt h1 {
+    font-size: 1.8rem; /* Увеличиваем размер шрифта */
+    padding-bottom: 12px;
+    transform: translateY(-15px);
+  }
+
+  .about-block__balloon-txt h1::after {
+    width: 70px; /* Увеличиваем длину линии */
+    height: 3px; /* Увеличиваем толщину */
+  }
+
+  .about-block__balloon-txt p {
+    font-size: 1rem; /* Возвращаем стандартный размер */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .about-block__balloon-txt p:first-of-type {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-block__balloon-img {
+    max-width: 280px; /* Еще меньше на очень маленьких экранах */
+  }
+
+  .about-block__balloon-txt h1 {
+    font-size: 1.6rem;
+    transform: translateY(-10px);
+  }
+
+  .about-block__balloon-txt h1::after {
+    width: 60px;
+  }
+
+  .about-block__balloon-txt p {
+    font-size: 0.95rem;
+  }
+}
