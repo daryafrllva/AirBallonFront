@@ -166,3 +166,37 @@
     font-size: 0.95rem;
   }
 }
+/* Стили для мини-шаров */
+.about-block__balloon-img1,
+.about-block__balloon-img2,
+.about-block__balloon-img3,
+.about-block__balloon-img4 {
+  position: absolute;
+  z-index: 0;
+  /* Размеры остаются как были */
+}
+
+/* BalloonMini1 - слева по центру основного шара */
+.about-block__balloon-img1 {
+  left: calc(50% - 520px); /* Сдвигаем влево от центра */
+  top: 38%;
+  transform: translateY(-50%);
+}
+
+/* BalloonMini3 - слева ниже */
+.about-block__balloon-img3 {
+  left: calc(50% - 600px); /* Чуть левее и ниже */
+  top: 70%;
+}
+
+/* BalloonMini2 - справа выше */
+.about-block__balloon-img2 {
+  right: calc(50% - 500px); /* Сдвигаем вправо от центра */
+  top: 60%;
+}
+
+/* BalloonMini4 - справа ниже */
+.about-block__balloon-img4 {
+  right: calc(50% - 570px); /* Чуть правее и ниже */
+  top: 7%;
+}

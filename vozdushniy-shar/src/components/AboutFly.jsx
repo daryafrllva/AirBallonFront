@@ -1,5 +1,9 @@
 import React from 'react';
 import Balloon from '../assets/svg-picture/balloon.svg';
+import BalloonMini1 from '../assets/svg-picture/baloonMini1.svg';
+import BalloonMini2 from '../assets/svg-picture/balloonMini2.svg';
+import BalloonMini3 from '../assets/svg-picture/balloonMini3.svg';
+import BalloonMini4 from '../assets/svg-picture/balloonMini4.svg';
 
 function AboutFly() {
     return (
@@ -10,6 +14,26 @@ function AboutFly() {
                         src={Balloon}
                         alt='Воздушный шар'
                         className='about-block__balloon-img'
+                    />
+                    <img
+                        src={BalloonMini1}
+                        alt='Воздушный шар маленький'
+                        className='about-block__balloon-img1'
+                    />
+                    <img
+                        src={BalloonMini2}
+                        alt='Воздушный шар маленький'
+                        className='about-block__balloon-img2'
+                    />
+                    <img
+                        src={BalloonMini3}
+                        alt='Воздушный шар маленький'
+                        className='about-block__balloon-img3'
+                    />
+                    <img
+                        src={BalloonMini4}
+                        alt='Воздушный шар маленький'
+                        className='about-block__balloon-img4'
                     />
                     <div className='about-block__balloon-txt'>
                         <h1>Воздухоплавание<br/>
